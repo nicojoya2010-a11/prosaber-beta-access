@@ -1,0 +1,7 @@
+# Android and desktop release artifacts are distributed through Google Play.
+*.apk
+*.aab
+*.exe
+
+# Local logs
+*.log

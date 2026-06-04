@@ -1,0 +1,202 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Registro de acceso a la beta de ProSaber con historial conectado a Google Sheets."
+    />
+    <title>ProSaber Beta | Registro</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="app-shell">
+      <section class="hero" aria-labelledby="page-title">
+        <div class="hero__content">
+          <div class="repo-pill" aria-label="Sitio beta">
+            <span class="repo-pill__dot"></span>
+            <span>prosaber/beta-access</span>
+          </div>
+
+          <h1 id="page-title">ProSaber Beta</h1>
+          <p class="hero__copy">
+            Acceso privado para estudiantes registrados. Cada envio queda en el
+            historial de Drive y desbloquea la descarga de la app.
+          </p>
+
+          <div class="release-strip" aria-label="Estado de la version beta">
+            <div>
+              <span class="metric-label">Version</span>
+              <strong>Android beta</strong>
+            </div>
+            <div>
+              <span class="metric-label">Acceso</span>
+              <strong>Google Play</strong>
+            </div>
+            <div>
+              <span class="metric-label">Registro</span>
+              <strong id="drive-status">Drive pendiente</strong>
+            </div>
+          </div>
+        </div>
+
+        <div class="phone-preview" aria-hidden="true">
+          <div class="phone-preview__bar"></div>
+          <div class="phone-preview__screen">
+            <div class="screen-header">
+              <span>ProSaber</span>
+              <b>Beta</b>
+            </div>
+            <div class="screen-score">
+              <span>Simulacro</span>
+              <strong>ICFES</strong>
+            </div>
+            <div class="screen-list">
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+            <div class="screen-graph">
+              <i style="--h: 44%"></i>
+              <i style="--h: 78%"></i>
+              <i style="--h: 62%"></i>
+              <i style="--h: 90%"></i>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="workspace-grid" aria-label="Registro e historial">
+        <article class="panel register-panel">
+          <div class="panel__header">
+            <div>
+              <span class="eyebrow">Formulario</span>
+              <h2>Registro de acceso</h2>
+            </div>
+            <span class="panel-badge">Beta</span>
+          </div>
+
+          <form id="beta-form" class="beta-form" novalidate>
+            <label class="field">
+              <span>Nombre y apellido</span>
+              <input
+                id="full-name"
+                name="fullName"
+                type="text"
+                autocomplete="name"
+                placeholder="Ej: Nicolas Joya"
+                minlength="3"
+                required
+              />
+            </label>
+
+            <label class="field">
+              <span>Curso</span>
+              <input
+                id="course"
+                name="course"
+                type="text"
+                list="course-options"
+                placeholder="Ej: 11-2"
+                required
+              />
+              <datalist id="course-options">
+                <option value="9"></option>
+                <option value="10"></option>
+                <option value="11"></option>
+                <option value="PreICFES"></option>
+              </datalist>
+            </label>
+
+            <label class="field">
+              <span>Correo a usar</span>
+              <input
+                id="email"
+                name="email"
+                type="email"
+                autocomplete="email"
+                placeholder="estudiante@correo.com"
+                required
+              />
+            </label>
+
+            <p id="form-message" class="form-message" role="status" aria-live="polite"></p>
+
+            <button class="submit-button" type="submit">
+              <span>Registrar acceso</span>
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path
+                  d="M5 12h12m-5-5 5 5-5 5"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                />
+              </svg>
+            </button>
+          </form>
+
+          <div id="download-card" class="download-card" hidden>
+            <div>
+              <span class="eyebrow">Acceso listo</span>
+              <h3>Abre la beta en Google Play</h3>
+            </div>
+            <a
+              id="download-link"
+              class="download-link"
+              href="https://play.google.com/apps/internaltest/4701357693854014512"
+              target="_blank"
+              rel="noopener"
+            >
+              Abrir beta
+            </a>
+          </div>
+        </article>
+
+        <aside class="panel history-panel">
+          <div class="panel__header">
+            <div>
+              <span class="eyebrow">Drive</span>
+              <h2>Historial</h2>
+            </div>
+            <button id="refresh-history" class="icon-button" type="button" aria-label="Actualizar historial">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path
+                  d="M20 6v5h-5M4 18v-5h5m10.1-4A7 7 0 0 0 7.2 6.1L4 9m16 6-3.2 2.9A7 7 0 0 1 4.9 15"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                />
+              </svg>
+            </button>
+          </div>
+
+          <div class="history-summary">
+            <div>
+              <span class="metric-label">Registros visibles</span>
+              <strong id="history-count">0</strong>
+            </div>
+            <div>
+              <span class="metric-label">Ultimo curso</span>
+              <strong id="latest-course">-</strong>
+            </div>
+          </div>
+
+          <ol id="history-list" class="history-list" aria-live="polite"></ol>
+        </aside>
+      </section>
+    </main>
+
+    <script src="app.js" defer></script>
+  </body>
+</html>
