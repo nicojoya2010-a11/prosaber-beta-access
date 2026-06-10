@@ -2,6 +2,7 @@ const CONFIG = {
   // Pega aqui la URL /exec del despliegue de Google Apps Script.
   scriptEndpoint: "https://script.google.com/macros/s/AKfycbz-MM0pjswfivKFFakbDl7oUtHZDvhCtpvpip4Hmn3uq982DX8CirmMTEMp1goRLx92/exec",
   betaUrl: "https://play.google.com/apps/internaltest/4701357693854014512",
+  groupUrl: "https://groups.google.com/g/prosaber-beta-testers",
   historyLimit: 8,
 };
 
@@ -9,6 +10,7 @@ const betaForm = document.querySelector("#beta-form");
 const formMessage = document.querySelector("#form-message");
 const downloadCard = document.querySelector("#download-card");
 const downloadLink = document.querySelector("#download-link");
+const groupLink = document.querySelector("#group-link");
 const historyList = document.querySelector("#history-list");
 const historyCount = document.querySelector("#history-count");
 const latestCourse = document.querySelector("#latest-course");
@@ -18,6 +20,7 @@ const refreshHistory = document.querySelector("#refresh-history");
 const localHistoryKey = "prosaber-beta-history";
 
 downloadLink.href = CONFIG.betaUrl;
+groupLink.href = CONFIG.groupUrl;
 downloadLink.target = "_blank";
 downloadLink.rel = "noopener";
 downloadLink.removeAttribute("download");
