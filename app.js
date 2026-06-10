@@ -1,6 +1,6 @@
 const CONFIG = {
   // Pega aqui la URL /exec del despliegue de Google Apps Script.
-  scriptEndpoint: "https://script.google.com/macros/s/AKfycbx_VDiT3c_Y-v_5NxEHHE5H4qkcz5sW-3JeJrOgF4IGTZY9cuH7i0iF2WH9AI0-LXg7/exec",
+  scriptEndpoint: "https://script.google.com/macros/s/AKfycbz-MM0pjswfivKFFakbDl7oUtHZDvhCtpvpip4Hmn3uq982DX8CirmMTEMp1goRLx92/exec",
   betaUrl: "https://play.google.com/apps/internaltest/4701357693854014512",
   historyLimit: 8,
 };
