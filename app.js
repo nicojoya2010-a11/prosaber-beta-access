@@ -1,7 +1,7 @@
 const CONFIG = {
   // Pega aqui la URL /exec del despliegue de Google Apps Script.
   scriptEndpoint: "https://script.google.com/macros/s/AKfycbz-MM0pjswfivKFFakbDl7oUtHZDvhCtpvpip4Hmn3uq982DX8CirmMTEMp1goRLx92/exec",
-  betaUrl: "https://play.google.com/apps/internaltest/4701357693854014512",
+  betaUrl: "https://play.google.com/store/apps/details?id=com.nicolasjoya.prosaber",
   groupUrl: "https://groups.google.com/g/prosaber-beta-testers",
   historyLimit: 8,
 };
