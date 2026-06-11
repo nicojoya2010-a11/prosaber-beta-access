@@ -36,7 +36,7 @@ function setMessage(text, type = "") {
 }
 
 function setDriveStatus() {
-  driveStatus.textContent = endpointReady() ? "Drive activo" : "Drive pendiente";
+  driveStatus.textContent = "Prueba beta";
 }
 
 function getInitials(name) {
