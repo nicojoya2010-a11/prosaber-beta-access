@@ -5,209 +5,319 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta
       name="description"
-      content="Registro de acceso a la beta de ProSaber con historial conectado a Google Sheets."
+      content="ProSaber: practica Saber 11 con simulacros, refuerzo por materias, progreso y tutor IA. Registro de acceso a la beta en Google Play."
     />
-    <title>ProSaber Beta | Registro</title>
+    <meta name="theme-color" content="#050507" />
+    <meta property="og:site_name" content="ProSaber" />
+    <meta property="og:title" content="ProSaber Beta | Acceso a testers" />
+    <meta
+      property="og:description"
+      content="Unete a la beta de ProSaber y prueba una app para practicar Saber 11 desde el celular."
+    />
+    <meta property="og:image" content="assets/prosaber-feature-graphic.png" />
+    <title>ProSaber Beta | Acceso a testers</title>
+    <link rel="icon" type="image/png" href="assets/prosaber-icon-512.png" />
+    <link rel="apple-touch-icon" href="assets/prosaber-icon-512.png" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <main class="app-shell">
+    <header class="site-header">
+      <a class="brand-mark" href="#inicio" aria-label="Ir al inicio de ProSaber">
+        <img src="assets/prosaber-icon-512.png" alt="" />
+        <span>Pro<span>Saber</span></span>
+      </a>
+
+      <nav class="site-nav" aria-label="Navegacion principal">
+        <a href="#funciones">Funciones</a>
+        <a href="#beta">Beta</a>
+        <a href="#registro">Registro</a>
+      </nav>
+    </header>
+
+    <main id="inicio">
       <section class="hero" aria-labelledby="page-title">
         <div class="hero__content">
-          <div class="repo-pill" aria-label="Sitio beta">
-            <span class="repo-pill__dot"></span>
-            <span>prosaber/beta-access</span>
-          </div>
-
-          <h1 id="page-title">ProSaber Beta</h1>
-          <p class="hero__copy">
-            Acceso privado para estudiantes registrados. Cada envio queda en el
-            historial de Drive y desbloquea la descarga de la app.
+          <p class="eyebrow">Beta cerrada en Google Play</p>
+          <h1 id="page-title">ProSaber</h1>
+          <p class="hero__lead">
+            Practica Saber 11 desde el celular con simulacros, refuerzo por
+            materias, progreso y apoyo academico en una sola app.
           </p>
 
-          <div class="release-strip" aria-label="Estado de la version beta">
-            <div>
-              <span class="metric-label">Version</span>
-              <strong>Android beta</strong>
-            </div>
-            <div>
-              <span class="metric-label">Acceso</span>
-              <strong>Google Play</strong>
-            </div>
-            <div>
-              <span class="metric-label">Registro</span>
-              <strong id="drive-status">Drive pendiente</strong>
-            </div>
+          <div class="hero__actions" aria-label="Acciones principales">
+            <a class="button button--primary" href="#registro">Quiero probarla</a>
+            <a
+              class="button button--ghost"
+              href="https://play.google.com/store/apps/details?id=com.nicolasjoya.prosaber"
+              target="_blank"
+              rel="noopener"
+            >
+              Ver en Play Store
+            </a>
           </div>
-        </div>
 
-        <div class="phone-preview" aria-hidden="true">
-          <div class="phone-preview__bar"></div>
-          <div class="phone-preview__screen">
-            <div class="screen-header">
-              <span>ProSaber</span>
-              <b>Beta</b>
+          <dl class="hero-metrics" aria-label="Resumen de la beta">
+            <div>
+              <dt>Banco activo</dt>
+              <dd>500 preguntas</dd>
             </div>
-            <div class="screen-score">
-              <span>Simulacro</span>
-              <strong>ICFES</strong>
+            <div>
+              <dt>Materias</dt>
+              <dd>Saber 11</dd>
             </div>
-            <div class="screen-list">
-              <span></span>
-              <span></span>
-              <span></span>
+            <div>
+              <dt>Estado</dt>
+              <dd id="drive-status">Drive pendiente</dd>
             </div>
-            <div class="screen-graph">
-              <i style="--h: 44%"></i>
-              <i style="--h: 78%"></i>
-              <i style="--h: 62%"></i>
-              <i style="--h: 90%"></i>
-            </div>
-          </div>
+          </dl>
         </div>
       </section>
 
-      <section class="workspace-grid" aria-label="Registro e historial">
-        <article class="panel register-panel">
-          <div class="panel__header">
-            <div>
-              <span class="eyebrow">Formulario</span>
-              <h2>Registro de acceso</h2>
-            </div>
-            <span class="panel-badge">Beta</span>
+      <section class="app-proof section-shell" aria-label="Vista previa de ProSaber">
+        <div class="proof-copy">
+          <p class="eyebrow">Hecha para estudiar en serio</p>
+          <h2>Una ruta clara para practicar, revisar y mejorar.</h2>
+          <p>
+            ProSaber esta pensada para estudiantes que quieren entrenar lectura,
+            matematicas, ciencias, sociales e ingles sin perderse entre mil
+            archivos. Entras, practicas, ves resultados y sabes que reforzar.
+          </p>
+        </div>
+
+        <figure class="phone-shot">
+          <img src="assets/prosaber-app-preview.png" alt="Vista de inicio de ProSaber en Android" />
+        </figure>
+      </section>
+
+      <section id="funciones" class="features section-shell" aria-labelledby="features-title">
+        <div class="section-heading">
+          <p class="eyebrow">Funciones</p>
+          <h2 id="features-title">Lo que vas a probar en la beta</h2>
+        </div>
+
+        <div class="feature-grid">
+          <article class="feature-card">
+            <span class="feature-icon">01</span>
+            <h3>Simulacros tipo ICFES</h3>
+            <p>Preguntas por areas, avance visible y retroalimentacion para revisar errores.</p>
+          </article>
+
+          <article class="feature-card">
+            <span class="feature-icon">02</span>
+            <h3>Refuerzo por materias</h3>
+            <p>Practica lectura critica, matematicas, ciencias, sociales e ingles.</p>
+          </article>
+
+          <article class="feature-card">
+            <span class="feature-icon">03</span>
+            <h3>Progreso y racha</h3>
+            <p>La app guarda tu actividad y muestra como vas mejorando con el tiempo.</p>
+          </article>
+
+          <article class="feature-card">
+            <span class="feature-icon">04</span>
+            <h3>Comunidad academica</h3>
+            <p>Foro, salas y materiales para que el estudio no dependa solo de memoria.</p>
+          </article>
+        </div>
+      </section>
+
+      <section id="beta" class="beta-steps section-shell" aria-labelledby="beta-title">
+        <div class="section-heading">
+          <p class="eyebrow">Acceso beta</p>
+          <h2 id="beta-title">Como entras a probarla</h2>
+        </div>
+
+        <div class="step-grid">
+          <article class="step-card">
+            <strong>1</strong>
+            <h3>Registra tu correo</h3>
+            <p>Usa el mismo correo de Google que tienes en Play Store.</p>
+          </article>
+
+          <article class="step-card">
+            <strong>2</strong>
+            <h3>Unete al grupo</h3>
+            <p>Google Play valida que ese correo este en el grupo de testers.</p>
+          </article>
+
+          <article class="step-card">
+            <strong>3</strong>
+            <h3>Abre la beta</h3>
+            <p>Despues del registro, entra al enlace de Play Store e instala la app.</p>
+          </article>
+        </div>
+      </section>
+
+      <section id="registro" class="register-section section-shell" aria-labelledby="register-title">
+        <div class="register-copy">
+          <p class="eyebrow">Registro</p>
+          <h2 id="register-title">Entra a la beta de ProSaber</h2>
+          <p>
+            Deja tus datos, revisa el enlace del grupo y abre la beta con el
+            mismo correo. El registro queda guardado en el historial conectado a
+            Drive.
+          </p>
+
+          <div class="beta-note">
+            <strong>Tip rapido</strong>
+            <span>Si Play Store dice que no tienes permiso, revisa que el correo registrado sea el mismo de Google Play.</span>
           </div>
+        </div>
 
-          <form id="beta-form" class="beta-form" novalidate>
-            <label class="field">
-              <span>Nombre y apellido</span>
-              <input
-                id="full-name"
-                name="fullName"
-                type="text"
-                autocomplete="name"
-                placeholder="Ej: Nicolas Joya"
-                minlength="3"
-                required
-              />
-            </label>
+        <div class="register-grid" aria-label="Formulario e historial">
+          <article class="panel register-panel">
+            <div class="panel__header">
+              <div>
+                <span class="eyebrow">Formulario</span>
+                <h3>Datos del tester</h3>
+              </div>
+              <span class="panel-badge">Beta</span>
+            </div>
 
-            <label class="field">
-              <span>Curso</span>
-              <input
-                id="course"
-                name="course"
-                type="text"
-                list="course-options"
-                placeholder="Ej: 11-2"
-                required
-              />
-              <datalist id="course-options">
-                <option value="9"></option>
-                <option value="10"></option>
-                <option value="11"></option>
-                <option value="PreICFES"></option>
-              </datalist>
-            </label>
-
-            <label class="field">
-              <span>Correo a usar</span>
-              <input
-                id="email"
-                name="email"
-                type="email"
-                autocomplete="email"
-                placeholder="estudiante@correo.com"
-                required
-              />
-            </label>
-
-            <p id="form-message" class="form-message" role="status" aria-live="polite"></p>
-
-            <button class="submit-button" type="submit">
-              <span>Registrar acceso</span>
-              <svg viewBox="0 0 24 24" aria-hidden="true">
-                <path
-                  d="M5 12h12m-5-5 5 5-5 5"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
+            <form id="beta-form" class="beta-form" novalidate>
+              <label class="field">
+                <span>Nombre y apellido</span>
+                <input
+                  id="full-name"
+                  name="fullName"
+                  type="text"
+                  autocomplete="name"
+                  placeholder="Ej: Nicolas Joya"
+                  minlength="3"
+                  required
                 />
-              </svg>
-            </button>
-          </form>
+              </label>
 
-          <div id="download-card" class="download-card" hidden>
-            <div>
-              <span class="eyebrow">Acceso listo</span>
-              <h3>Unete al grupo y abre la beta</h3>
-              <p>Usa el mismo correo que registraste.</p>
-            </div>
-            <div class="download-actions">
-              <a
-                id="group-link"
-                class="download-link"
-                href="https://groups.google.com/g/prosaber-beta-testers"
-                target="_blank"
-                rel="noopener"
-              >
-                1. Unirme al grupo
-              </a>
-              <a
-                id="download-link"
-                class="download-link download-link--secondary"
-                href="https://play.google.com/store/apps/details?id=com.nicolasjoya.prosaber"
-                target="_blank"
-                rel="noopener"
-              >
-                2. Abrir beta
-              </a>
-            </div>
-          </div>
-        </article>
-
-        <aside class="panel history-panel">
-          <div class="panel__header">
-            <div>
-              <span class="eyebrow">Drive</span>
-              <h2>Historial</h2>
-            </div>
-            <button id="refresh-history" class="icon-button" type="button" aria-label="Actualizar historial">
-              <svg viewBox="0 0 24 24" aria-hidden="true">
-                <path
-                  d="M20 6v5h-5M4 18v-5h5m10.1-4A7 7 0 0 0 7.2 6.1L4 9m16 6-3.2 2.9A7 7 0 0 1 4.9 15"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
+              <label class="field">
+                <span>Curso</span>
+                <input
+                  id="course"
+                  name="course"
+                  type="text"
+                  list="course-options"
+                  placeholder="Ej: 11-2"
+                  required
                 />
-              </svg>
-            </button>
-          </div>
+                <datalist id="course-options">
+                  <option value="9"></option>
+                  <option value="10"></option>
+                  <option value="11"></option>
+                  <option value="PreICFES"></option>
+                </datalist>
+              </label>
 
-          <div class="history-summary">
-            <div>
-              <span class="metric-label">Registros visibles</span>
-              <strong id="history-count">0</strong>
-            </div>
-            <div>
-              <span class="metric-label">Ultimo curso</span>
-              <strong id="latest-course">-</strong>
-            </div>
-          </div>
+              <label class="field">
+                <span>Correo a usar</span>
+                <input
+                  id="email"
+                  name="email"
+                  type="email"
+                  autocomplete="email"
+                  placeholder="estudiante@correo.com"
+                  required
+                />
+              </label>
 
-          <ol id="history-list" class="history-list" aria-live="polite"></ol>
-        </aside>
+              <p id="form-message" class="form-message" role="status" aria-live="polite"></p>
+
+              <button class="submit-button" type="submit">
+                <span>Registrar acceso</span>
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <path
+                    d="M5 12h12m-5-5 5 5-5 5"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                  />
+                </svg>
+              </button>
+            </form>
+
+            <div id="download-card" class="download-card" hidden>
+              <div>
+                <span class="eyebrow">Acceso listo</span>
+                <h3>Unete al grupo y abre la beta</h3>
+                <p>Usa el mismo correo que registraste.</p>
+              </div>
+              <div class="download-actions">
+                <a
+                  id="group-link"
+                  class="download-link"
+                  href="https://groups.google.com/g/prosaber-beta-testers"
+                  target="_blank"
+                  rel="noopener"
+                >
+                  1. Unirme al grupo
+                </a>
+                <a
+                  id="download-link"
+                  class="download-link download-link--secondary"
+                  href="https://play.google.com/store/apps/details?id=com.nicolasjoya.prosaber"
+                  target="_blank"
+                  rel="noopener"
+                >
+                  2. Abrir beta
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <aside class="panel history-panel">
+            <div class="panel__header">
+              <div>
+                <span class="eyebrow">Drive</span>
+                <h3>Historial</h3>
+              </div>
+              <button id="refresh-history" class="icon-button" type="button" aria-label="Actualizar historial">
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <path
+                    d="M20 6v5h-5M4 18v-5h5m10.1-4A7 7 0 0 0 7.2 6.1L4 9m16 6-3.2 2.9A7 7 0 0 1 4.9 15"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                  />
+                </svg>
+              </button>
+            </div>
+
+            <div class="history-summary">
+              <div>
+                <span class="metric-label">Registros visibles</span>
+                <strong id="history-count">0</strong>
+              </div>
+              <div>
+                <span class="metric-label">Ultimo curso</span>
+                <strong id="latest-course">-</strong>
+              </div>
+            </div>
+
+            <ol id="history-list" class="history-list" aria-live="polite"></ol>
+          </aside>
+        </div>
       </section>
     </main>
+
+    <footer class="site-footer">
+      <span>ProSaber beta</span>
+      <a
+        href="https://play.google.com/store/apps/details?id=com.nicolasjoya.prosaber"
+        target="_blank"
+        rel="noopener"
+      >
+        Google Play
+      </a>
+    </footer>
 
     <script src="app.js" defer></script>
   </body>
