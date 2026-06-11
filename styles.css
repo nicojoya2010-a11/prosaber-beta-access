@@ -131,8 +131,10 @@ img {
   align-items: center;
   isolation: isolate;
   background:
-    linear-gradient(90deg, rgba(5, 5, 7, 0.98) 0%, rgba(5, 5, 7, 0.86) 45%, rgba(5, 5, 7, 0.38) 100%),
-    url("assets/prosaber-feature-graphic.png") center right / cover no-repeat;
+    radial-gradient(circle at 80% 42%, rgba(168, 85, 247, 0.22), transparent 22%),
+    radial-gradient(circle at 92% 66%, rgba(52, 211, 153, 0.11), transparent 22%),
+    linear-gradient(135deg, rgba(168, 85, 247, 0.11), transparent 36%),
+    #050507;
 }
 
 .hero::after {
@@ -144,9 +146,23 @@ img {
 }
 
 .hero__content {
+  position: relative;
+  z-index: 2;
   width: min(1160px, calc(100% - 32px));
   margin: 0 auto;
   padding: 78px 0 96px;
+}
+
+.hero__logo {
+  position: absolute;
+  top: 50%;
+  right: max(32px, calc((100% - 1160px) / 2));
+  z-index: 1;
+  width: clamp(210px, 28vw, 390px);
+  border-radius: 28px;
+  opacity: 0.92;
+  filter: drop-shadow(0 34px 70px rgba(168, 85, 247, 0.34));
+  transform: translateY(-50%);
 }
 
 .eyebrow {
@@ -739,8 +755,18 @@ p {
   .hero {
     min-height: auto;
     background:
-      linear-gradient(180deg, rgba(5, 5, 7, 0.82), rgba(5, 5, 7, 0.98)),
-      url("assets/prosaber-feature-graphic.png") center top / cover no-repeat;
+      radial-gradient(circle at 78% 18%, rgba(168, 85, 247, 0.2), transparent 26%),
+      linear-gradient(180deg, rgba(168, 85, 247, 0.08), rgba(5, 5, 7, 0.98)),
+      #050507;
+  }
+
+  .hero__logo {
+    top: 42px;
+    right: 16px;
+    width: 112px;
+    border-radius: 18px;
+    opacity: 0.28;
+    transform: none;
   }
 
   .hero__content,
